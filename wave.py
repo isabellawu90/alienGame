@@ -314,6 +314,7 @@ class Wave(object):
         when it reaches the right side of the game screen. Then it changes
         self._direction = True.
         """
+        incr = self.speedChange()
         max = self._maxAlien()
         min = self._minAlien()
         right = self.getRPos()
@@ -343,6 +344,7 @@ class Wave(object):
         when it reaches the left side of the game screen. Then it changes
         self._direction = False.
         """
+        incr = self.speedChange()
         max = self._maxAlien()
         min = self._minAlien()
         left = self.getLPos()
