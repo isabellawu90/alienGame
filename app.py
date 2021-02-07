@@ -250,12 +250,14 @@ class Invaders(GameApp):
         return self._wave
 
     def active(self):
-        """If the state is active, then the game does a few things. If there is
+        """
+        If the state is active, then the game does a few things. If there is
         no more aliens and if the player has more than 0 lives, then the state
         is complete. If the player has no ship and the player has more than 1
         life, then the player has another try at clearing the alien wave. If
         the player does no ship and no lives or if the aliens passed the line,
-        then the player loses."""
+        then the player loses.
+        """
         if self._wave.getGame() == True and self._wave.getLives()> 0:
             self._text = GLabel(text="You Win! Press 'S' to continue",
                                     font_size=44, left=225, bottom=335)
